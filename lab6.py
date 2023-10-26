@@ -8,7 +8,11 @@ def encoder(password):  # method to encode a password by adding three to each di
 
 
 def decoder(code):
-    pass
+    decoded_password = ""  
+    for i in code:  # iterates through code and subtracts 3 to each digit
+        decoded_digit = (int(i) - 3) % 10
+        decoded_password += str(decoded_digit) 
+    return decoded_password 
 
 
 def main():  # main function
@@ -36,3 +40,4 @@ def main():  # main function
 
 if __name__ == "__main__":  # calls main function and executes program
     main()
+# Done by: Sebastian Santa
